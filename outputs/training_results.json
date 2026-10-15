@@ -1,0 +1,1402 @@
+{
+  "data_quality": {
+    "shape": [
+      1702,
+      20
+    ],
+    "missing": {
+      "rainfall": 0,
+      "temperature": 0,
+      "soil_ph": 0,
+      "fertilizer": 0,
+      "yield": 0
+    },
+    "duplicates": "0",
+    "outliers": {
+      "rainfall": {
+        "Q1": 940.98,
+        "Q3": 2133.31,
+        "IQR": 1192.34,
+        "lower_bound": -847.53,
+        "upper_bound": 3921.82,
+        "n_outliers": 0,
+        "pct_outliers": 0.0
+      },
+      "temperature": {
+        "Q1": 17.89,
+        "Q3": 33.12,
+        "IQR": 15.23,
+        "lower_bound": -4.95,
+        "upper_bound": 55.96,
+        "n_outliers": 0,
+        "pct_outliers": 0.0
+      },
+      "soil_ph": {
+        "Q1": 5.7,
+        "Q3": 7.36,
+        "IQR": 1.66,
+        "lower_bound": 3.21,
+        "upper_bound": 9.85,
+        "n_outliers": 0,
+        "pct_outliers": 0.0
+      },
+      "fertilizer": {
+        "Q1": 137.48,
+        "Q3": 281.77,
+        "IQR": 144.29,
+        "lower_bound": -78.96,
+        "upper_bound": 498.21,
+        "n_outliers": 0,
+        "pct_outliers": 0.0
+      },
+      "yield": {
+        "Q1": 8230.0,
+        "Q3": 10580.0,
+        "IQR": 2350.0,
+        "lower_bound": 4705.0,
+        "upper_bound": 14105.0,
+        "n_outliers": 3,
+        "pct_outliers": 0.18
+      }
+    }
+  },
+  "descriptive_stats": {
+    "rainfall": {
+      "count": 1702.0,
+      "mean": 1542.17,
+      "std": 707.92,
+      "min": 302.15,
+      "25%": 940.98,
+      "50%": 1536.38,
+      "75%": 2133.31,
+      "max": 2798.49
+    },
+    "temperature": {
+      "count": 1702.0,
+      "mean": 25.22,
+      "std": 8.77,
+      "min": 10.0,
+      "25%": 17.89,
+      "50%": 24.97,
+      "75%": 33.12,
+      "max": 39.99
+    },
+    "soil_ph": {
+      "count": 1702.0,
+      "mean": 6.53,
+      "std": 0.97,
+      "min": 4.8,
+      "25%": 5.7,
+      "50%": 6.53,
+      "75%": 7.36,
+      "max": 8.2
+    },
+    "fertilizer": {
+      "count": 1702.0,
+      "mean": 208.63,
+      "std": 83.2,
+      "min": 60.02,
+      "25%": 137.48,
+      "50%": 210.74,
+      "75%": 281.77,
+      "max": 349.84
+    },
+    "yield": {
+      "count": 1702.0,
+      "mean": 9402.03,
+      "std": 1657.08,
+      "min": 4070.0,
+      "25%": 8230.0,
+      "50%": 9425.0,
+      "75%": 10580.0,
+      "max": 14200.0
+    }
+  },
+  "statistical_analysis": {
+    "correlation": {
+      "results": [
+        {
+          "feature": "rainfall",
+          "display_name": "Rainfall (mm)",
+          "r": 0.4616,
+          "p_value": 6.754299111013713e-64,
+          "significant": "Yes",
+          "interpretation": "moderate positive correlation (r=0.4616, p=6.75e-64)"
+        },
+        {
+          "feature": "temperature",
+          "display_name": "Temperature (\u00b0C)",
+          "r": -0.0292,
+          "p_value": 0.31443104722645093,
+          "significant": "No",
+          "interpretation": "negligible negative correlation (r=-0.0292, p=3.14e-01)"
+        },
+        {
+          "feature": "soil_ph",
+          "display_name": "Soil pH",
+          "r": -0.0348,
+          "p_value": 0.2297898419622787,
+          "significant": "No",
+          "interpretation": "negligible negative correlation (r=-0.0348, p=2.30e-01)"
+        },
+        {
+          "feature": "fertilizer",
+          "display_name": "Fertilizer (kg/ha)",
+          "r": 0.5291,
+          "p_value": 7.002024913514172e-87,
+          "significant": "Yes",
+          "interpretation": "strong positive correlation (r=0.5291, p=7.00e-87)"
+        }
+      ],
+      "matrix": {
+        "rainfall": {
+          "rainfall": 1.0,
+          "temperature": -0.03350510369934835,
+          "soil_ph": 0.0022263312615615986,
+          "fertilizer": 0.058118018680672415,
+          "yield": 0.4616052393395084
+        },
+        "temperature": {
+          "rainfall": -0.03350510369934835,
+          "temperature": 1.0,
+          "soil_ph": 0.03516884362495734,
+          "fertilizer": -0.029578717223186505,
+          "yield": -0.029173734856330538
+        },
+        "soil_ph": {
+          "rainfall": 0.0022263312615615986,
+          "temperature": 0.03516884362495734,
+          "soil_ph": 1.0,
+          "fertilizer": -0.00541944179593099,
+          "yield": -0.0348237576813221
+        },
+        "fertilizer": {
+          "rainfall": 0.058118018680672415,
+          "temperature": -0.029578717223186505,
+          "soil_ph": -0.00541944179593099,
+          "fertilizer": 1.0,
+          "yield": 0.5290942289478827
+        },
+        "yield": {
+          "rainfall": 0.4616052393395084,
+          "temperature": -0.029173734856330538,
+          "soil_ph": -0.0348237576813221,
+          "fertilizer": 0.5290942289478827,
+          "yield": 1.0
+        }
+      },
+      "heatmap_path": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/correlation_heatmap.png",
+      "scatter_path": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/scatter_plots.png"
+    },
+    "anova_soil": {
+      "applicable": true,
+      "group_col": "soil_type",
+      "n_groups": 4,
+      "groups": [
+        "Loamy",
+        "Sandy",
+        "Silt",
+        "Clay"
+      ],
+      "group_stats": [
+        {
+          "group": "Loamy",
+          "n": 329,
+          "mean": 9353.22,
+          "std": 1664.12,
+          "median": 9270.0
+        },
+        {
+          "group": "Sandy",
+          "n": 306,
+          "mean": 9331.76,
+          "std": 1571.56,
+          "median": 9305.0
+        },
+        {
+          "group": "Silt",
+          "n": 279,
+          "mean": 9448.32,
+          "std": 1633.38,
+          "median": 9590.0
+        },
+        {
+          "group": "Clay",
+          "n": 277,
+          "mean": 9344.66,
+          "std": 1690.16,
+          "median": 9430.0
+        }
+      ],
+      "normality": [
+        {
+          "group": "Loamy",
+          "W": 0.9946,
+          "p": 0.307095,
+          "normal": "Yes"
+        },
+        {
+          "group": "Sandy",
+          "W": 0.9865,
+          "p": 0.005716,
+          "normal": "No"
+        },
+        {
+          "group": "Silt",
+          "W": 0.9852,
+          "p": 0.005621,
+          "normal": "No"
+        },
+        {
+          "group": "Clay",
+          "W": 0.9931,
+          "p": 0.227841,
+          "normal": "Yes"
+        }
+      ],
+      "levene_stat": 0.1067,
+      "levene_p": 0.956197,
+      "equal_variances": "Yes",
+      "f_statistic": 0.3005,
+      "p_value": 0.8250366172428599,
+      "significant": "No",
+      "interpretation": "F(3, 1187) = 0.3005, p = 8.25e-01. Fail to reject H0: No significant difference between group means."
+    },
+    "anova_fertilizer": {
+      "applicable": true,
+      "group_col": "Fertilizer Level (Tertiles)",
+      "n_groups": 3,
+      "groups": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "group_stats": [
+        {
+          "group": "Low",
+          "n": 397,
+          "mean": 8299.45,
+          "std": 1422.41
+        },
+        {
+          "group": "Medium",
+          "n": 397,
+          "mean": 9485.14,
+          "std": 1455.61
+        },
+        {
+          "group": "High",
+          "n": 397,
+          "mean": 10319.4,
+          "std": 1363.12
+        }
+      ],
+      "f_statistic": 204.5175,
+      "p_value": 4.701108934795486e-77,
+      "significant": "Yes",
+      "interpretation": "F(2, 1188) = 204.5175, p = 4.70e-77. Reject H0: Mean yield differs significantly across fertilizer levels."
+    },
+    "regression_summary": {
+      "equation": "Yield = 6123.33 + 1.00\u00b7Rainfall (mm) + 0.26\u00b7Temperature (\u00b0C) - 55.36\u00b7Soil pH + 9.88\u00b7Fertilizer (kg/ha)",
+      "coefficients": [
+        {
+          "variable": "const",
+          "display_name": "Intercept",
+          "coefficient": 6123.3253,
+          "std_error": 277.7382,
+          "t_statistic": 22.0471,
+          "p_value": 1.491844364682175e-90,
+          "ci_lower": 5578.4124,
+          "ci_upper": 6668.2383,
+          "significant": "Yes"
+        },
+        {
+          "variable": "rainfall",
+          "display_name": "Rainfall (mm)",
+          "coefficient": 1.004,
+          "std_error": 0.0493,
+          "t_statistic": 20.3598,
+          "p_value": 2.899864807298421e-79,
+          "ci_lower": 0.9072,
+          "ci_upper": 1.1007,
+          "significant": "Yes"
+        },
+        {
+          "variable": "temperature",
+          "display_name": "Temperature (\u00b0C)",
+          "coefficient": 0.2588,
+          "std_error": 3.9746,
+          "t_statistic": 0.0651,
+          "p_value": 0.9480980218144774,
+          "ci_lower": -7.5393,
+          "ci_upper": 8.0568,
+          "significant": "No"
+        },
+        {
+          "variable": "soil_ph",
+          "display_name": "Soil pH",
+          "coefficient": -55.3606,
+          "std_error": 35.4638,
+          "t_statistic": -1.561,
+          "p_value": 0.11878031348497592,
+          "ci_lower": -124.9394,
+          "ci_upper": 14.2183,
+          "significant": "No"
+        },
+        {
+          "variable": "fertilizer",
+          "display_name": "Fertilizer (kg/ha)",
+          "coefficient": 9.8845,
+          "std_error": 0.4167,
+          "t_statistic": 23.7232,
+          "p_value": 3.9715908330899555e-102,
+          "ci_lower": 9.067,
+          "ci_upper": 10.702,
+          "significant": "Yes"
+        }
+      ],
+      "r_squared": 0.4673,
+      "adj_r_squared": 0.4655,
+      "f_statistic": 260.0992,
+      "f_pvalue": 1.770493295242754e-160,
+      "aic": 20269.05,
+      "bic": 20294.46,
+      "n_obs": 1191,
+      "df_model": 4,
+      "df_resid": 1186,
+      "vif": [
+        {
+          "feature": "rainfall",
+          "display_name": "Rainfall (mm)",
+          "vif": 5.3621,
+          "multicollinearity": "Moderate"
+        },
+        {
+          "feature": "temperature",
+          "display_name": "Temperature (\u00b0C)",
+          "vif": 8.2372,
+          "multicollinearity": "Moderate"
+        },
+        {
+          "feature": "soil_ph",
+          "display_name": "Soil pH",
+          "vif": 14.7008,
+          "multicollinearity": "High"
+        },
+        {
+          "feature": "fertilizer",
+          "display_name": "Fertilizer (kg/ha)",
+          "vif": 6.5597,
+          "multicollinearity": "Moderate"
+        }
+      ],
+      "ols_summary_text": "                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                  yield   R-squared:                       0.467\nModel:                            OLS   Adj. R-squared:                  0.466\nMethod:                 Least Squares   F-statistic:                     260.1\nDate:                Thu, 15 Oct 2026   Prob (F-statistic):          1.77e-160\nTime:                        20:34:54   Log-Likelihood:                -10130.\nNo. Observations:                1191   AIC:                         2.027e+04\nDf Residuals:                    1186   BIC:                         2.029e+04\nDf Model:                           4                                         \nCovariance Type:            nonrobust                                         \n===============================================================================\n                  coef    std err          t      P>|t|      [0.025      0.975]\n-------------------------------------------------------------------------------\nconst        6123.3253    277.738     22.047      0.000    5578.412    6668.238\nrainfall        1.0040      0.049     20.360      0.000       0.907       1.101\ntemperature     0.2588      3.975      0.065      0.948      -7.539       8.057\nsoil_ph       -55.3606     35.464     -1.561      0.119    -124.939      14.218\nfertilizer      9.8845      0.417     23.723      0.000       9.067      10.702\n==============================================================================\nOmnibus:                        1.870   Durbin-Watson:                   1.945\nProb(Omnibus):                  0.393   Jarque-Bera (JB):                1.937\nSkew:                          -0.082   Prob(JB):                        0.380\nKurtosis:                       2.889   Cond. No.                     1.37e+04\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n[2] The condition number is large, 1.37e+04. This might indicate that there are\nstrong multicollinearity or other numerical problems."
+    },
+    "regression_interpretations": [
+      "**Intercept** = 6123.33: The predicted yield when all features are zero (theoretical baseline, may not be practically meaningful).",
+      "**Rainfall (mm)** (\u03b2 = 1.00): For each one-unit increase in rainfall (mm), yield increases by 1.00 kg/ha on average, holding other variables constant. 95% CI: [0.91, 1.10]. This coefficient is statistically significant (p < 0.05).",
+      "**Temperature (\u00b0C)** (\u03b2 = 0.26): For each one-unit increase in temperature (\u00b0c), yield increases by 0.26 kg/ha on average, holding other variables constant. 95% CI: [-7.54, 8.06]. This coefficient is NOT statistically significant (p \u2265 0.05).",
+      "**Soil pH** (\u03b2 = -55.36): For each one-unit increase in soil ph, yield decreases by 55.36 kg/ha on average, holding other variables constant. 95% CI: [-124.94, 14.22]. This coefficient is NOT statistically significant (p \u2265 0.05).",
+      "**Fertilizer (kg/ha)** (\u03b2 = 9.88): For each one-unit increase in fertilizer (kg/ha), yield increases by 9.88 kg/ha on average, holding other variables constant. 95% CI: [9.07, 10.70]. This coefficient is statistically significant (p < 0.05)."
+    ]
+  },
+  "model_comparison": {
+    "Linear Regression": {
+      "train_MAE": 957.08,
+      "train_MSE": 1428650.43,
+      "train_RMSE": 1195.26,
+      "train_R2": 0.4673,
+      "val_MAE": 1025.43,
+      "val_MSE": 1547110.72,
+      "val_RMSE": 1243.83,
+      "val_R2": 0.4408,
+      "cv_mae": 961.15,
+      "cv_std": 17.83,
+      "unit": "3"
+    },
+    "CART Tree": {
+      "train_MAE": 871.73,
+      "train_MSE": 1166393.95,
+      "train_RMSE": 1080.0,
+      "train_R2": 0.5651,
+      "val_MAE": 1004.06,
+      "val_MSE": 1503997.09,
+      "val_RMSE": 1226.38,
+      "val_R2": 0.4564,
+      "best_params": {
+        "max_depth": 7,
+        "min_samples_leaf": 20,
+        "ccp_alpha": 0.0
+      },
+      "tuning_log": [
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.0,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.001,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.01,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.1,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.0,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.001,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.01,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.1,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.0,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.001,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.01,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.1,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.0,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.001,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.01,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.1,
+          "train_MAE": 987.03,
+          "val_MAE": 1068.14,
+          "val_R2": 0.3975,
+          "n_leaves": "8"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.0,
+          "train_MAE": 890.06,
+          "val_MAE": 1030.84,
+          "val_R2": 0.4227,
+          "n_leaves": "32"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.001,
+          "train_MAE": 890.06,
+          "val_MAE": 1030.84,
+          "val_R2": 0.4227,
+          "n_leaves": "32"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.01,
+          "train_MAE": 890.06,
+          "val_MAE": 1030.84,
+          "val_R2": 0.4227,
+          "n_leaves": "32"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.1,
+          "train_MAE": 890.06,
+          "val_MAE": 1030.84,
+          "val_R2": 0.4227,
+          "n_leaves": "32"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.0,
+          "train_MAE": 904.55,
+          "val_MAE": 1033.06,
+          "val_R2": 0.4218,
+          "n_leaves": "28"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.001,
+          "train_MAE": 904.55,
+          "val_MAE": 1033.06,
+          "val_R2": 0.4218,
+          "n_leaves": "28"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.01,
+          "train_MAE": 904.55,
+          "val_MAE": 1033.06,
+          "val_R2": 0.4218,
+          "n_leaves": "28"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.1,
+          "train_MAE": 904.55,
+          "val_MAE": 1033.06,
+          "val_R2": 0.4218,
+          "n_leaves": "28"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.0,
+          "train_MAE": 912.83,
+          "val_MAE": 1013.37,
+          "val_R2": 0.4537,
+          "n_leaves": "29"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.001,
+          "train_MAE": 912.83,
+          "val_MAE": 1013.37,
+          "val_R2": 0.4537,
+          "n_leaves": "29"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.01,
+          "train_MAE": 912.83,
+          "val_MAE": 1013.37,
+          "val_R2": 0.4537,
+          "n_leaves": "29"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.1,
+          "train_MAE": 912.83,
+          "val_MAE": 1013.37,
+          "val_R2": 0.4537,
+          "n_leaves": "29"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.0,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.001,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.01,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.1,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.0,
+          "train_MAE": 803.09,
+          "val_MAE": 1044.56,
+          "val_R2": 0.3629,
+          "n_leaves": "78"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.001,
+          "train_MAE": 803.09,
+          "val_MAE": 1044.56,
+          "val_R2": 0.3629,
+          "n_leaves": "78"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.01,
+          "train_MAE": 803.09,
+          "val_MAE": 1044.56,
+          "val_R2": 0.3629,
+          "n_leaves": "78"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.1,
+          "train_MAE": 803.09,
+          "val_MAE": 1044.56,
+          "val_R2": 0.3629,
+          "n_leaves": "78"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.0,
+          "train_MAE": 833.61,
+          "val_MAE": 1007.26,
+          "val_R2": 0.4275,
+          "n_leaves": "64"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.001,
+          "train_MAE": 833.61,
+          "val_MAE": 1007.26,
+          "val_R2": 0.4275,
+          "n_leaves": "64"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.01,
+          "train_MAE": 833.61,
+          "val_MAE": 1007.26,
+          "val_R2": 0.4275,
+          "n_leaves": "64"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.1,
+          "train_MAE": 833.61,
+          "val_MAE": 1007.26,
+          "val_R2": 0.4275,
+          "n_leaves": "64"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.0,
+          "train_MAE": 871.73,
+          "val_MAE": 1004.06,
+          "val_R2": 0.4564,
+          "n_leaves": "44"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.001,
+          "train_MAE": 871.73,
+          "val_MAE": 1004.06,
+          "val_R2": 0.4564,
+          "n_leaves": "44"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.01,
+          "train_MAE": 871.73,
+          "val_MAE": 1004.06,
+          "val_R2": 0.4564,
+          "n_leaves": "44"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.1,
+          "train_MAE": 871.73,
+          "val_MAE": 1004.06,
+          "val_R2": 0.4564,
+          "n_leaves": "44"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.0,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.001,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.01,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 7,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.1,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.0,
+          "train_MAE": 654.85,
+          "val_MAE": 1159.78,
+          "val_R2": 0.2531,
+          "n_leaves": "168"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.001,
+          "train_MAE": 654.85,
+          "val_MAE": 1159.78,
+          "val_R2": 0.2531,
+          "n_leaves": "168"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.01,
+          "train_MAE": 654.85,
+          "val_MAE": 1159.78,
+          "val_R2": 0.2531,
+          "n_leaves": "168"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.1,
+          "train_MAE": 654.85,
+          "val_MAE": 1159.78,
+          "val_R2": 0.2531,
+          "n_leaves": "168"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.0,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.001,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.01,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.1,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.0,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.001,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.01,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.1,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.0,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.001,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.01,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.1,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.0,
+          "train_MAE": 631.13,
+          "val_MAE": 1172.22,
+          "val_R2": 0.2326,
+          "n_leaves": "194"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.001,
+          "train_MAE": 631.13,
+          "val_MAE": 1172.22,
+          "val_R2": 0.2326,
+          "n_leaves": "194"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.01,
+          "train_MAE": 631.13,
+          "val_MAE": 1172.22,
+          "val_R2": 0.2326,
+          "n_leaves": "194"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.1,
+          "train_MAE": 631.13,
+          "val_MAE": 1172.22,
+          "val_R2": 0.2326,
+          "n_leaves": "194"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.0,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.001,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.01,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.1,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.0,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.001,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.01,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.1,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.0,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.001,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.01,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": 15,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.1,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.0,
+          "train_MAE": 631.13,
+          "val_MAE": 1172.22,
+          "val_R2": 0.2326,
+          "n_leaves": "194"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.001,
+          "train_MAE": 631.13,
+          "val_MAE": 1172.22,
+          "val_R2": 0.2326,
+          "n_leaves": "194"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.01,
+          "train_MAE": 631.13,
+          "val_MAE": 1172.22,
+          "val_R2": 0.2326,
+          "n_leaves": "194"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 5,
+          "ccp_alpha": 0.1,
+          "train_MAE": 631.13,
+          "val_MAE": 1172.22,
+          "val_R2": 0.2326,
+          "n_leaves": "194"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.0,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.001,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.01,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 10,
+          "ccp_alpha": 0.1,
+          "train_MAE": 787.6,
+          "val_MAE": 1038.79,
+          "val_R2": 0.4009,
+          "n_leaves": "92"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.0,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.001,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.01,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 20,
+          "ccp_alpha": 0.1,
+          "train_MAE": 865.16,
+          "val_MAE": 1012.38,
+          "val_R2": 0.4459,
+          "n_leaves": "48"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.0,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.001,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.01,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 50,
+          "ccp_alpha": 0.1,
+          "train_MAE": 942.89,
+          "val_MAE": 1041.23,
+          "val_R2": 0.4202,
+          "n_leaves": "18"
+        }
+      ],
+      "n_leaves": "44",
+      "tree_depth": 7,
+      "cv_mae": 1029.24,
+      "cv_std": 39.51,
+      "unit": "4"
+    },
+    "Random Forest (Extension)": {
+      "train_MAE": 674.47,
+      "train_MSE": 726700.41,
+      "train_RMSE": 852.47,
+      "train_R2": 0.729,
+      "val_MAE": 963.45,
+      "val_MSE": 1380482.83,
+      "val_RMSE": 1174.94,
+      "val_R2": 0.501,
+      "best_params": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5
+      },
+      "cv_mae": 968.48,
+      "cv_std": 16.31,
+      "unit": "4+5"
+    }
+  },
+  "test_results": {
+    "Linear Regression": {
+      "test_MAE": 990.42,
+      "test_MSE": 1574625.77,
+      "test_RMSE": 1254.84,
+      "test_R2": 0.4741
+    },
+    "CART Tree": {
+      "test_MAE": 1020.77,
+      "test_MSE": 1681129.14,
+      "test_RMSE": 1296.58,
+      "test_R2": 0.4385
+    },
+    "Random Forest (Extension)": {
+      "test_MAE": 972.04,
+      "test_MSE": 1523164.19,
+      "test_RMSE": 1234.17,
+      "test_R2": 0.4913
+    }
+  },
+  "best_model_name": "Random Forest (Extension)",
+  "selected_model_name": "CART Tree",
+  "selection_notes": [
+    "  Random Forest (Extension): MAE=963.45 (+0.0% vs best)",
+    "  CART Tree: MAE=1004.06 (+4.2% vs best)",
+    "  Linear Regression: MAE=1025.43 (+6.4% vs best)",
+    "  \u2192 Selected CART Tree over Random Forest: nearly as accurate but more interpretable (IF-THEN rules, visual tree)."
+  ],
+  "cart_info": {
+    "best_params": {
+      "max_depth": 7,
+      "min_samples_leaf": 20,
+      "ccp_alpha": 0.0
+    },
+    "n_leaves": "44",
+    "tree_depth": 7,
+    "rules_path": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/cart_rules.txt"
+  },
+  "rf_info": {
+    "best_params": {
+      "n_estimators": 100,
+      "max_depth": 10,
+      "min_samples_leaf": 5
+    },
+    "cv_mae": 968.48,
+    "cv_std": 16.31
+  },
+  "feature_ranges": {
+    "rainfall": [
+      302.15,
+      2791.26
+    ],
+    "temperature": [
+      10.0,
+      39.99
+    ],
+    "soil_ph": [
+      4.8,
+      8.2
+    ],
+    "fertilizer": [
+      60.02,
+      349.84
+    ]
+  },
+  "feature_cols": [
+    "rainfall",
+    "temperature",
+    "soil_ph",
+    "fertilizer"
+  ],
+  "plots": {
+    "heatmap": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/correlation_heatmap.png",
+    "scatter": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/scatter_plots.png",
+    "residuals": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/residual_plots.png",
+    "cart_tree": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/cart_tree.png",
+    "feature_importances": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/feature_importances.png",
+    "anova_soil_plot": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/anova_boxplot_soil_type.png",
+    "anova_fert_plot": "/Users/dharbhavedhanth/Documents/Crop-yield production/crop-yield-prediction/outputs/anova_boxplot_fertilizer_level.png"
+  }
+}

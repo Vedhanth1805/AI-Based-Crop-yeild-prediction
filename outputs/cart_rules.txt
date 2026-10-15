@@ -1,0 +1,115 @@
+|--- Fertilizer (kg/ha) <= -0.21
+|   |--- Rainfall (mm) <= -0.44
+|   |   |--- Fertilizer (kg/ha) <= -0.81
+|   |   |   |--- Rainfall (mm) <= -0.90
+|   |   |   |   |--- Fertilizer (kg/ha) <= -1.25
+|   |   |   |   |   |--- value: [6741.54]
+|   |   |   |   |--- Fertilizer (kg/ha) >  -1.25
+|   |   |   |   |   |--- Soil pH <= -0.28
+|   |   |   |   |   |   |--- value: [6976.50]
+|   |   |   |   |   |--- Soil pH >  -0.28
+|   |   |   |   |   |   |--- value: [7891.15]
+|   |   |   |--- Rainfall (mm) >  -0.90
+|   |   |   |   |--- Soil pH <= -0.56
+|   |   |   |   |   |--- value: [7475.24]
+|   |   |   |   |--- Soil pH >  -0.56
+|   |   |   |   |   |--- value: [8102.00]
+|   |   |--- Fertilizer (kg/ha) >  -0.81
+|   |   |   |--- Soil pH <= 1.08
+|   |   |   |   |--- Temperature (°C) <= 0.25
+|   |   |   |   |   |--- value: [7970.67]
+|   |   |   |   |--- Temperature (°C) >  0.25
+|   |   |   |   |   |--- Temperature (°C) <= 1.13
+|   |   |   |   |   |   |--- value: [9236.19]
+|   |   |   |   |   |--- Temperature (°C) >  1.13
+|   |   |   |   |   |   |--- value: [8155.50]
+|   |   |   |--- Soil pH >  1.08
+|   |   |   |   |--- value: [7457.62]
+|   |--- Rainfall (mm) >  -0.44
+|   |   |--- Rainfall (mm) <= 0.89
+|   |   |   |--- Fertilizer (kg/ha) <= -0.54
+|   |   |   |   |--- Soil pH <= 0.87
+|   |   |   |   |   |--- Fertilizer (kg/ha) <= -0.86
+|   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- Fertilizer (kg/ha) >  -0.86
+|   |   |   |   |   |   |--- value: [9321.54]
+|   |   |   |   |--- Soil pH >  0.87
+|   |   |   |   |   |--- Rainfall (mm) <= 0.27
+|   |   |   |   |   |   |--- value: [7625.50]
+|   |   |   |   |   |--- Rainfall (mm) >  0.27
+|   |   |   |   |   |   |--- value: [8338.00]
+|   |   |   |--- Fertilizer (kg/ha) >  -0.54
+|   |   |   |   |--- Soil pH <= -0.03
+|   |   |   |   |   |--- value: [9817.00]
+|   |   |   |   |--- Soil pH >  -0.03
+|   |   |   |   |   |--- value: [9272.38]
+|   |   |--- Rainfall (mm) >  0.89
+|   |   |   |--- Soil pH <= 0.69
+|   |   |   |   |--- Soil pH <= -0.81
+|   |   |   |   |   |--- value: [9436.88]
+|   |   |   |   |--- Soil pH >  -0.81
+|   |   |   |   |   |--- Fertilizer (kg/ha) <= -0.92
+|   |   |   |   |   |   |--- value: [9740.45]
+|   |   |   |   |   |--- Fertilizer (kg/ha) >  -0.92
+|   |   |   |   |   |   |--- value: [10419.05]
+|   |   |   |--- Soil pH >  0.69
+|   |   |   |   |--- value: [9172.00]
+|--- Fertilizer (kg/ha) >  -0.21
+|   |--- Rainfall (mm) <= -0.20
+|   |   |--- Fertilizer (kg/ha) <= 0.32
+|   |   |   |--- Rainfall (mm) <= -0.56
+|   |   |   |   |--- Soil pH <= 0.65
+|   |   |   |   |   |--- value: [8721.88]
+|   |   |   |   |--- Soil pH >  0.65
+|   |   |   |   |   |--- value: [7771.00]
+|   |   |   |--- Rainfall (mm) >  -0.56
+|   |   |   |   |--- value: [9275.24]
+|   |   |--- Fertilizer (kg/ha) >  0.32
+|   |   |   |--- Soil pH <= -1.16
+|   |   |   |   |--- Fertilizer (kg/ha) <= 1.02
+|   |   |   |   |   |--- value: [8774.50]
+|   |   |   |   |--- Fertilizer (kg/ha) >  1.02
+|   |   |   |   |   |--- value: [9348.00]
+|   |   |   |--- Soil pH >  -1.16
+|   |   |   |   |--- Soil pH <= 0.62
+|   |   |   |   |   |--- Fertilizer (kg/ha) <= 0.88
+|   |   |   |   |   |   |--- value: [9543.68]
+|   |   |   |   |   |--- Fertilizer (kg/ha) >  0.88
+|   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- Soil pH >  0.62
+|   |   |   |   |   |--- Rainfall (mm) <= -0.79
+|   |   |   |   |   |   |--- value: [8750.69]
+|   |   |   |   |   |--- Rainfall (mm) >  -0.79
+|   |   |   |   |   |   |--- value: [9864.29]
+|   |--- Rainfall (mm) >  -0.20
+|   |   |--- Fertilizer (kg/ha) <= 1.05
+|   |   |   |--- Rainfall (mm) <= 1.05
+|   |   |   |   |--- Soil pH <= 1.21
+|   |   |   |   |   |--- Soil pH <= -1.18
+|   |   |   |   |   |   |--- value: [9425.65]
+|   |   |   |   |   |--- Soil pH >  -1.18
+|   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- Soil pH >  1.21
+|   |   |   |   |   |--- value: [9338.50]
+|   |   |   |--- Rainfall (mm) >  1.05
+|   |   |   |   |--- Fertilizer (kg/ha) <= 0.09
+|   |   |   |   |   |--- value: [10036.79]
+|   |   |   |   |--- Fertilizer (kg/ha) >  0.09
+|   |   |   |   |   |--- Rainfall (mm) <= 1.48
+|   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- Rainfall (mm) >  1.48
+|   |   |   |   |   |   |--- value: [11144.44]
+|   |   |--- Fertilizer (kg/ha) >  1.05
+|   |   |   |--- Rainfall (mm) <= 0.24
+|   |   |   |   |--- Temperature (°C) <= -0.02
+|   |   |   |   |   |--- value: [11075.45]
+|   |   |   |   |--- Temperature (°C) >  -0.02
+|   |   |   |   |   |--- value: [10124.50]
+|   |   |   |--- Rainfall (mm) >  0.24
+|   |   |   |   |--- Soil pH <= -0.89
+|   |   |   |   |   |--- value: [10918.50]
+|   |   |   |   |--- Soil pH >  -0.89
+|   |   |   |   |   |--- Rainfall (mm) <= 0.84
+|   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- Rainfall (mm) >  0.84
+|   |   |   |   |   |   |--- value: [11684.57]
